@@ -63,13 +63,13 @@ The DKG node endpoints still resolve at `theblackbox.network`; that host is the 
 ### 1. Install
 
 ```bash
-git clone https://github.com/InterNullOrg/blackbox_mcp.git
-cd blackbox_mcp
+git clone https://github.com/InterNullOrg/internull-mcp.git
+cd internull-mcp
 npm install
 npm run build
 ```
 
-> The GitHub repo is still named `blackbox_mcp`. The published npm package is **`internull-mcp`**.
+> Repo: `github.com/InterNullOrg/internull-mcp`. npm: `internull-mcp`.
 
 ### 2. Configure Your MCP Client
 
@@ -85,7 +85,7 @@ Edit `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS) o
   "mcpServers": {
     "internull": {
       "command": "node",
-      "args": ["/absolute/path/to/blackbox_mcp/dist/index.js"],
+      "args": ["/absolute/path/to/internull-mcp/dist/index.js"],
       "env": {
         "DKG_NODE_1": "https://theblackbox.network/node1",
         "DKG_NODE_2": "https://theblackbox.network/node2",
@@ -109,7 +109,7 @@ Add to project `.mcp.json` or `~/.claude/settings.json`:
   "mcpServers": {
     "internull": {
       "command": "node",
-      "args": ["/absolute/path/to/blackbox_mcp/dist/index.js"],
+      "args": ["/absolute/path/to/internull-mcp/dist/index.js"],
       "env": {
         "DKG_NODE_1": "https://theblackbox.network/node1",
         "DKG_NODE_2": "https://theblackbox.network/node2",
@@ -133,7 +133,7 @@ Add to `.cursor/mcp.json` in your project root:
   "mcpServers": {
     "internull": {
       "command": "node",
-      "args": ["/absolute/path/to/blackbox_mcp/dist/index.js"],
+      "args": ["/absolute/path/to/internull-mcp/dist/index.js"],
       "env": {
         "DKG_NODE_1": "https://theblackbox.network/node1",
         "DKG_NODE_2": "https://theblackbox.network/node2",
@@ -157,7 +157,7 @@ Use `tsx` instead of `node` for development:
   "mcpServers": {
     "internull": {
       "command": "npx",
-      "args": ["tsx", "/absolute/path/to/blackbox_mcp/src/index.ts"],
+      "args": ["tsx", "/absolute/path/to/internull-mcp/src/index.ts"],
       "env": {
         "DKG_NODE_1": "https://theblackbox.network/node1",
         "DKG_NODE_2": "https://theblackbox.network/node2",
@@ -257,8 +257,8 @@ The server supports two transport modes:
 
 ```bash
 # On your EC2 instance
-git clone https://github.com/InterNullOrg/blackbox_mcp.git
-cd blackbox_mcp
+git clone https://github.com/InterNullOrg/internull-mcp.git
+cd internull-mcp
 docker compose up -d
 ```
 
@@ -273,8 +273,8 @@ PORT=8080 CORS_ORIGIN=https://yourdomain.com docker compose up -d
 ### Deploy on EC2 (without Docker)
 
 ```bash
-git clone https://github.com/InterNullOrg/blackbox_mcp.git
-cd blackbox_mcp
+git clone https://github.com/InterNullOrg/internull-mcp.git
+cd internull-mcp
 npm install
 npm run build
 
@@ -491,7 +491,7 @@ npx tsx test-idempotency-splits.ts
 ## Project Structure
 
 ```
-blackbox_mcp/
+internull-mcp/
 ├── src/
 │   ├── index.ts          # MCP server: 18 tools + agent guide resource (stdio + HTTP)
 │   ├── api.ts            # InterNull API client (DKG node communication)
